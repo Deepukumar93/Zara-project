@@ -9,12 +9,13 @@ body {
   color: #333;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 20px 40px;
-  /* background-color: #f5fdf8; */
+  flex-wrap: wrap;
 }
 
 .logo {
@@ -39,11 +40,16 @@ body {
   color: red;
 }
 
+.icons {
+  display: flex;
+  gap: 15px;
+}
+
 .icons span {
-  margin-left: 15px;
   font-size: 18px;
 }
 
+/* Hero Section */
 .hero {
   position: relative;
   width: 100%;
@@ -90,7 +96,75 @@ body {
 .hero-text button:hover {
   background-color: #019751;
 }
+
 .hero-text button a {
   text-decoration: none;
   color: #dd2222;
+}
+
+/* ----------------------- */
+/* 💡 Mobile Responsiveness */
+/* ----------------------- */
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .icons {
+    margin-top: 10px;
+    gap: 10px;
+  }
+
+  .hero {
+    height: 70vh;
+  }
+
+  .hero-text {
+    left: 5%;
+    max-width: 90%;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    font-size: 14px;
+  }
+
+  .hero-text button {
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    height: 60vh;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .hero-text p {
+    font-size: 13px;
+  }
+
+  .nav-links li a {
+    font-size: 12px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
 }
